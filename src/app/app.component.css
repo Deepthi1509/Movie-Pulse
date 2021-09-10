@@ -1,0 +1,20 @@
+.active{
+    font-weight: bold;
+}
+.nav-link{
+    color: black !important;
+    font-family: 'Merriweather', serif;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+/* .navbar{
+    position: fixed ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100000;
+
+} */

@@ -1,0 +1,39 @@
+<ngx-loading-bar [height]="'5px'" [color]="'#230036'" [includeSpinner]="false"></ngx-loading-bar>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fdcd3b;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://m.media-amazon.com/images/G/01/IMDb/brand/guidelines/imdb/IMDb_Logo_Rectangle_Gold._CB443386186_.png" alt="" width="100vw" height="50vh" class="ms-2"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item" *ngIf="us.userLoginStatus">
+            <a class="nav-link" routerLink="tvs" routerLinkActive='active'>TV</a>
+          </li>
+          <li class="nav-item" *ngIf="us.userLoginStatus">
+            <a class="nav-link" routerLink="movies" routerLinkActive='active'>Movies</a>
+          </li>
+          <li class="nav-item" *ngIf="us.userLoginStatus">
+            <a class="nav-link" routerLink="favs" routerLinkActive='active'>Fav Shows</a>
+          </li>
+          <li class="nav-item" *ngIf="us.userLoginStatus">
+            <a class="nav-link" routerLink="favm" routerLinkActive='active'>Fav Movies</a>
+          </li>
+          <li class="nav-item" *ngIf="us.userLoginStatus">
+            <a class="nav-link" routerLink="profile" routerLinkActive='active'>Profile</a>
+          </li>
+          <li class="nav-item" *ngIf="!us.userLoginStatus">
+            <a class="nav-link" routerLink="Login" routerLinkActive='active'>Login</a>
+          </li>
+          <li class="nav-item" *ngIf="us.userLoginStatus" (click)="userLogout() ">
+            <a class="nav-link" routerLink="Login" routerLinkActive='active'>Log out</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color:rgb(24, 24, 24);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+}
+.form-label{
+    color: honeydew;
+}
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+p,span,h2,h3j{
+    font-family: 'Merriweather', serif;
+}
